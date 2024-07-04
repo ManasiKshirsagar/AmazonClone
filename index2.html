@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in to Amazon</title>
+    <style>
+        *{
+         padding: 0px;
+          margin: 0px;
+        }
+
+        .header{
+            height: 70px;
+            background-color:#222f3d;
+        }
+        .logo{
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          /* align-items: center; */
+        }
+
+        .logo img{
+            height: 60px;
+        }
+
+        .sing-in{
+          height: 300px;
+          width: 100%;
+          /* background-color: antiquewhite; */
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .sing-in h3{
+            display: block;
+           padding: 10px;
+           font-size: 45px;
+           float: left;
+           font-weight: 500;
+        }
+
+        .content{
+            height: 280px;
+            /* background: #1213ab; */
+           border: 1px solid rgb(23, 22, 22);
+            border-radius: 10px;
+            width: 500px;
+            padding: 10px 20px;
+        }
+
+        .content input{
+            width: 95%;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 5px 0px;
+        }
+
+        .content button{
+            width: 96%;
+            padding:10px;
+            background-color: rgb(227 223 29);
+            color: black;
+            border-radius: 20px;
+            margin: 5px 0px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            border: 2px solid black;
+            box-shadow: 0 3px 7px black;
+        }
+
+        .footer{
+            height: 100px;
+            background-color: #222f3d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+        }
+  
+        .pages a{
+            padding: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="amazon_logo (1).png"></div>
+    </div>
+    <div class="sing-in">
+        <div class="content">
+        <h3>Sing in or create Account</h3><br>
+           <label for="email">Enter your Email or Phone Number</label>
+            <input id="email" type="text" placeholder="Enter here">
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" placeholder="Amazon Password">
+        <button type="submit" onclick="return submitFrom()" id="btn">Sing in</button>
+        <p>By continuing, you agree to Amazon`s <a href="">Conditions of use</a> and <a href="">Privacy Notice</a></p>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="pages">
+        <a >Conditions of us</a>
+        <a>Privacy Notice</a>
+        <a>Your Ads Privacy Chocies</a>
+    </div>
+    <div class="copyright">
+        @ 1996-2023, Amazon.com, Inc. or its affiliates
+    </div>
+</div>
+</div>
+
+<script>
+
+    // btn=document.querySelector("#btn")
+    function submitFrom(){
+     btn=document.querySelector("#btn");
+     value=document.querySelector("#email").value;
+     password=document.querySelector("#password").value;
+
+     if(value==="" || password===""){
+        alert("Fill the details");
+        return false;
+     }
+     else{
+        alert("You are succefully singed in!!!");
+        return true;
+    }
+}
+</script>
+</body>
+</html>
